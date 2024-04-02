@@ -9,27 +9,30 @@ public class Max_Sum_Subarray_of_size_K {
 		System.out.println("Enter sub array size:");
 		Scanner sc=new Scanner(System.in);
 		int k=sc.nextInt();
-		int arr[]= {1,2,3,4,5,6,7};
+		int arr[]= {400,200,300,100};
 		System.out.println(maxSum(arr, k));
 
 	}
 	public static int maxSum(int[] arr,int k) {
+		if(arr.length==0 || k<=0 ||k>arr.length) {
+			return 0;
+		}
 		int sum=0;
 		int i=0;
 		int j=0;
-		while(j-i+1<=k) {
-			sum=sum+arr[j];
-			j++;
+		for(i=0;i<k;i++) {
+			sum=sum+arr[i];
 		}
-		int temp=0;
-		while(j<arr.length) {
-			
-			temp=sum-arr[i]+arr[j];
-			if(temp>sum) {
-				sum=temp;
+		int max=sum;
+		int start=0;
+		while(i<arr.length) {
+			max=max+arr[i]-arr[start];
+			if(max>sum) {
+				sum=max;
 			}
+			start++;
 			i++;
-			j++;
+			
 		}
 		return sum;
 	}
