@@ -25,9 +25,7 @@ public class Max_Sum_Subarray_of_size_K {
 		while(j<arr.length) {
 			
 			temp=sum-arr[i]+arr[j];
-			if(temp>sum) {
-				sum=temp;
-			}
+			sum=Math.max(temp, sum);
 			i++;
 			j++;
 		}
