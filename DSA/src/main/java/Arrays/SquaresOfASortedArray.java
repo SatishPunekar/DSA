@@ -39,7 +39,6 @@ public class SquaresOfASortedArray {
             	k--;
             	ans[k]=nums[i];
             }
-
         }
         return ans;
 		
