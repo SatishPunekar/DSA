@@ -16,16 +16,6 @@ public class StackOverview {
 //top() Returns the top element of the stack.
 //isEmpty() returns true if stack is empty else false.
 //isFull() returns true if the stack is full else false.
-		
-
-
-//	Operations of stack using Java.util package (inbuilt stack)
-	Stack<Integer> stk= new Stack<>();
-	Stack st=new Stack();
-	ArrayList<Integer> list1=new ArrayList<Integer>();
-	list1
-//	push operation:
-	stk.
 //	Implemantation using array:(Fixed size)
 	
 //	PUSH() operation.

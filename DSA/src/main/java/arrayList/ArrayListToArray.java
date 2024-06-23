@@ -16,7 +16,7 @@ public class ArrayListToArray {
 		Integer ar[]=new Integer[list.size()];
 		System.out.println(ar.length);
 		Integer[] sr=list.toArray(ar); //Conversion of list to array
-		for(int i=0;i<arr.length;i++) {
+		for(int i=0;i<4;i++) {
 			System.out.println(sr[i]);
 			}
 		System.out.println();
