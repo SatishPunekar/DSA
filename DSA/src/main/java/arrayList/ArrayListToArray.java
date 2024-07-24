@@ -8,7 +8,7 @@ public class ArrayListToArray {
 		list.add(2);
 		list.add(3);
 		list.add(4);
-		list.e
+//		list.e
 
 		int[] arr=new int[3];
 		for(int i=0;i<arr.length;i++) {
@@ -23,9 +23,6 @@ public class ArrayListToArray {
 		System.out.println();
 //		toArray() method returns an array of type Object(Object[]). 
 //		We need to typecast it to Integer before using as Integer objects. 
-//		If we do not typecast, we get compilation error. 
-		
-		
+//		If we do not typecast, we get compilation error.				
 	}
-
 }
