@@ -4,7 +4,7 @@ public class TimeComplexity {
 
 	public static void main(String[] args) {
 		double timee=System.currentTimeMillis();
-		System.out.println(TimeComplexity.findSum(4));
+		System.out.println(TimeComplexity.findSum(100000));
 		
 		System.out.println((System.currentTimeMillis() - timee));
 		

@@ -1,6 +1,7 @@
 	package Arrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class AlternatePosiAndNagNumbers {
@@ -15,32 +16,33 @@ public class AlternatePosiAndNagNumbers {
 		for(int i=0;i<arr.length;i++) {
 			arr[i]=sc.nextInt();
 		}
-		rearrange(arr, N);
-
+		System.out.println(Arrays.toString(reArrange(arr, N)));
 	}
-	static void rearrange(int arr[], int n) {
-        // code here
+	public static int[] reArrange(int arr[], int n) {
 		ArrayList<Integer> pos=new ArrayList<Integer>();
 		ArrayList<Integer> nag=new ArrayList<Integer>();
 		for(int i=0;i<arr.length;i++) {
-			if(arr[i]<0) {
-				nag.add(arr[i]);
-			}
-			else {//9 -2 4 -1 5 -5 0 -3 2
+			if(arr[i]>=0) {
 				pos.add(arr[i]);
 			}
-		}
-		for(int i=0;i<nag.size()||i<pos.size();i++) {
-			if(i<pos.size()) {
-				System.out.print(pos.get(i)+" ");
-			}
-			if(i<nag.size()) {
-				System.out.print(nag.get(i)+" ");
+			else {
+				nag.add(arr[i]);
 			}
 		}
-		
-    }
-
+		int j=0;
+		int k=0;
+		for(int i=0;i<arr.length;i++) {
+			if(i%2==0) {
+				arr[i]=pos.get(j);
+				j++;
+			}
+			else {
+				arr[i]=nag.get(k);
+				k++;
+			}
+		}
+		return arr;
+	}
 }
 //Given an unsorted array Arr of N positive and negative numbers. Your task is to create an array of alternate positive and negative numbers without changing the relative order of positive and negative numbers.
 //Note: Array should start with a positive number and 0 (zero) should be considered a positive element.
